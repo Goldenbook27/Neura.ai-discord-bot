@@ -20,7 +20,7 @@ client.on('messageCreate', message => {
     message.reply("Hey there 👋 I'm alive!");
   }
   if (message.content === '!ping') {
-    message.reply(`🏓 Pong! Neura.Ai's heartbeat is ${Math.round(client.ws.ping)}ms`);  }
+    message.reply(`🏓 Pong! Neura.Ai's heartbeat is ${Math.abs(Math.round(client.ws.ping))}ms`);  }
 });
 
 client.login(process.env.DISCORD_TOKEN);
